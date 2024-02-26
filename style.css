@@ -1,0 +1,67 @@
+:root {
+    --primary-color: #0B1623;
+    --secondary-color: #f4f8ff;
+    --correct-color: #538D4E;
+    --wrong-color: #3A3A3C;
+    --misplaced-color: #B59F3B; 
+    --text-color: #f5f8ff;
+}
+
+.light-mode {
+    --primary-color: #f4f8ff;
+    --secondary-color: #0B1623;
+    --correct-color: #538D4E;
+    --wrong-color: #915457;
+    --misplaced-color: #B59F3B; 
+    --text-color: #121213;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif';
+}
+
+h1 {
+    text-align: center;
+}
+
+header {
+    border-bottom: 1px solid var(--text-color);
+}
+
+#game {
+    display: grid;
+    place-items: center;
+    height: 70vh;
+}
+
+#wordle-grid {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 8px;
+}
+
+.letter {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--secondary-color);
+    text-transform: uppercase;
+    display: grid;
+    place-items: center;
+    font-size: 2.4rem;
+}
+
+.letter.correct {
+    background-color: var(--correct-color);
+}
+
+.letter.wrong {
+    background-color: var(--wrong-color);
+}
+
+.letter.misplaced {
+    background-color: var(--misplaced-color);
+}
