@@ -81,6 +81,10 @@ document.addEventListener('keydown', async(event) => {
             updateAttemptGrid();
             gameState.currentAttempt++;
         }
+        if (gameState.currentGuess === gameConfig.word) {
+            console.log('You win');
+            return;
+        }
         
         gameState.currentPosition = 0;
         gameState.currentGuess = '';
